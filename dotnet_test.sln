@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.808.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet_test", "dotnet_test\dotnet_test.csproj", "{701DDB4E-1BF5-4628-8400-1ECEFA121967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dddd", "dddd\dddd.csproj", "{C5F95185-5413-446D-9704-4EDDCA4A57C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "no_auth_test", "no_auth_test\no_auth_test.csproj", "{E420C487-6AA1-47F0-A312-921781A644A8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{701DDB4E-1BF5-4628-8400-1ECEFA121967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701DDB4E-1BF5-4628-8400-1ECEFA121967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701DDB4E-1BF5-4628-8400-1ECEFA121967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701DDB4E-1BF5-4628-8400-1ECEFA121967}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F95185-5413-446D-9704-4EDDCA4A57C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F95185-5413-446D-9704-4EDDCA4A57C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F95185-5413-446D-9704-4EDDCA4A57C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F95185-5413-446D-9704-4EDDCA4A57C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E420C487-6AA1-47F0-A312-921781A644A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E420C487-6AA1-47F0-A312-921781A644A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E420C487-6AA1-47F0-A312-921781A644A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E420C487-6AA1-47F0-A312-921781A644A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5BD5063-BE3B-404E-8EBE-3E0425ED9BE2}
+	EndGlobalSection
+EndGlobal
