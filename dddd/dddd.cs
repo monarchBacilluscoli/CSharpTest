@@ -5,9 +5,24 @@ using System.Runtime.CompilerServices;
 namespace dddd
 {
     internal sealed class SomeInternalType {
+        public SomeInternalType() { }
+        public SomeInternalType(Int32 i)
+        {
+            m_data = i;
+        }
         public static void Ring()
         {
             Console.WriteLine("ring--");
+        }
+        private Int32 m_data;
+        public Int32 Data
+        {
+            get { return m_data; }
+            set { m_data = value; }
+        }
+        public static SomeInternalType operator + (SomeInternalType a, SomeInternalType b)
+        {
+            return new SomeInternalType(a.Data + b.Data);
         }
     }
 
@@ -16,6 +31,13 @@ namespace dddd
         public static void PubRing()
         {
             Console.WriteLine("pubring--");
+        }
+    }
+    static internal class SomeInternalTypeExtension
+    {
+        public static void Sing(this SomeInternalType i) // notice this 'this'
+        {
+            Console.WriteLine("This internal type is singing~~");
         }
     }
 }

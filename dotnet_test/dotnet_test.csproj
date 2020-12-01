@@ -9,5 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\dddd\dddd.csproj" />
+    <ProjectReference Include="..\const_var_assemblr\const_var_assemblr.csproj" />
   </ItemGroup>
 </Project>
