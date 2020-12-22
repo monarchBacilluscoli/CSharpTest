@@ -18,9 +18,20 @@ namespace PPP
         }
     }
 
+    [Serializable]
     public class PointObject
     {
         public int m_x, m_y;
+
+        public PointObject():this(0,0)
+        {
+        }
+
+        public PointObject(int x, int y)
+        {
+            m_x = x;
+            m_y = y;
+        }
         public void Change(Int32 rx, Int32 ry)
         {
             m_x = rx;

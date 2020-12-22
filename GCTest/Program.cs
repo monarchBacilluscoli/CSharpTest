@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Reflection;
 using System.Threading;
+using System.Runtime.InteropServices;
 
 
 namespace GCTest
@@ -15,12 +16,20 @@ namespace GCTest
 
     class Program
     {
+        class EmptyClass
+        {
 
+        }
         
 
         unsafe static void Main(string[] args)
         {
-
+            {
+                //GCHandle gch = GCHandle.Alloc(new EmptyClass(), GCHandleType.Pinned); // 会出错
+                Object o = new object();
+                var t = o.GetType();
+                var ti = t.GetTypeInfo();
+            }
             {
                 GCWatcherTest.Foo();
                 

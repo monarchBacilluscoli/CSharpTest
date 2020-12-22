@@ -405,5 +405,5 @@ ASALocalRun/
 .localhistory/
 
 # portable executable
-.exe
-.dll
+*.exe
+*.dll
