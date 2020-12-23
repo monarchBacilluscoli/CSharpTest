@@ -15,7 +15,7 @@ namespace inheritance_test
         }
     }
 
-    internal class Derived: Base
+    internal class Derived : Base
     {
         public override void Foo(Object obj)
         {
@@ -38,7 +38,7 @@ namespace inheritance_test
             Base b = new Derived();
             b.Foo(p); // this function call results in a boxing, this is about POLYMORPHISM
 
-                        Derived d = new Derived();
+            Derived d = new Derived();
             d.Foo(d); // this function call doesn't result in a boxing. It is about the OVERLOAD
         }
     }

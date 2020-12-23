@@ -61,6 +61,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationTest", "Serial
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadTest", "ThreadTest\ThreadTest.csproj", "{382D9A95-2D61-4C7A-85C6-6CDBFB71358A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "algorithm", "algorithm", "{9225071D-F799-4F9E-8F1F-430AF3B79393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bucket_sort", "bucket_sort\bucket_sort.csproj", "{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +183,10 @@ Global
 		{382D9A95-2D61-4C7A-85C6-6CDBFB71358A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{382D9A95-2D61-4C7A-85C6-6CDBFB71358A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{382D9A95-2D61-4C7A-85C6-6CDBFB71358A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -188,5 +196,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B540A8C4-0B6D-4AAE-A4D7-523F23B7FDB6} = {D0A1DBB2-87CD-4708-8073-7A260CA67DF6}
+		{BBA2F41D-5EEC-4556-9249-A19DCEDACFDC} = {9225071D-F799-4F9E-8F1F-430AF3B79393}
 	EndGlobalSection
 EndGlobal

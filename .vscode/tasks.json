@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/interface_test/interface_test.csproj",
+                "${workspaceFolder}/${relativeFileDirname}/${relativeFileDirname}.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/interface_test/interface_test.csproj",
+                "${workspaceFolder}/${relativeFileDirname}/${relativeFileDirname}.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/interface_test/interface_test.csproj",
+                "${workspaceFolder}/${relativeFileDirname}/${relativeFileDirname}.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

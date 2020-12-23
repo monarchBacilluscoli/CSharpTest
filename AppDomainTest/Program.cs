@@ -10,7 +10,7 @@ namespace AppDomainTest
         {
             {
                 AppDomain aD2 = AppDomain.CreateDomain("AD2");
-                RefAppDomainTest radt = aD2.CreateInstanceAndUnwrap()
+                // RefAppDomainTest radt = aD2.CreateInstanceAndUnwrap()
             }
 
             {
