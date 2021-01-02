@@ -17,7 +17,7 @@ namespace inheritance_test
 
     internal class Derived : Base
     {
-        public override void Foo(Object obj)
+        public override sealed void Foo(Object obj)
         {
             Console.WriteLine("DerivedFoo");
         }
@@ -28,10 +28,29 @@ namespace inheritance_test
         }
     }
 
+    internal class Derived2 : Derived
+    {
+        public new void Foo(Object obj)
+        {
+            System.Console.WriteLine("Derived2Foo");
+        }
+    }
+
     class Program
     {
         static void Main(string[] args)
         {
+            {// 确定c#翻译到IL是调用哪个
+                Derived d1 = new Derived();
+                d1.Foo(new object());
+            }
+            {
+                Derived2 d2 = new Derived2();
+                Base b2 = d2;
+                Object o = new object();
+                b2.Foo(o);
+                return;
+            }
             Point p;
             p.x = 1;
             p.y = 11;

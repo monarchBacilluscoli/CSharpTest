@@ -407,3 +407,9 @@ ASALocalRun/
 # portable executable
 *.exe
 *.dll
+
+# managed modules
+*.module
+
+# other files
+*.png

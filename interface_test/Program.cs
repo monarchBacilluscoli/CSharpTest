@@ -3,9 +3,13 @@ using System.Collections.Generic;
 
 namespace interface_test
 {
-    internal class Base:IComparable
+
+    internal class Base : IComparable, ISimpleInterface
     {
         public Int32 m_x = 10;
+
+        public int Data { get => 1; set => m_x = value; }
+
         public virtual void SomeVirtualFoo()
         {
             Console.WriteLine("base virual");
@@ -35,8 +39,18 @@ namespace interface_test
         {
             Console.WriteLine("Base ShrinkAccessablity");
         }
+
+        public void SomeInterfaceMethod()
+        {
+            // throw new NotImplementedException();
+        }
+
+        public void SomeMethod()
+        {
+
+        }
     }
-    internal class Derived: Base
+    internal class Derived : Base
     {
         public override void SomeVirtualFoo()
         {
@@ -72,6 +86,23 @@ namespace interface_test
         static void Main(string[] args)
         {
             {
+                HandcraftWeapon c = new HandcraftWeapon();
+                IMissileComponent imc = c;
+                c.Fire();
+                imc.Fire();
+                return;
+            }
+            {
+                Derived d1 = new Derived();
+                d1.SomeMethod();
+            }
+            {
+                // SimpleInterface si = new SimpleInterface(); //! can not create a interface of an interface
+                Base b1 = new Base();
+                ((ISimpleInterface)b1).SomeInterfaceMethod();
+                return;
+            }
+            {
                 Derived d1 = new Derived();
                 d1.m_x = 1;
                 Base b1 = new Derived();
@@ -99,7 +130,7 @@ namespace interface_test
 
 
             Console.WriteLine("Hello World!");
-            
+
         }
     }
 }
