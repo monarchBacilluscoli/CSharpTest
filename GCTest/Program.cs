@@ -16,14 +16,32 @@ namespace GCTest
 
     class Program
     {
-        class EmptyClass
+        class FullClass
         {
-
+            private Int32 i = 100;
+            private float f = 100.0f;
+            private long l = 10000;
         }
-        
+
 
         unsafe static void Main(string[] args)
         {
+            { // GCNotification Test
+                GCNotification.GCDone += (Int32 gen) => System.Console.WriteLine("GG on gen {0} at {1}", gen, DateTime.Now);
+                GC.Collect(0);
+                for (int i = 0; i < 1000000; i++)
+                {
+                    new FullClass();
+                }
+                GC.Collect(0);
+                GC.Collect(0);
+                for (int i = 0; i < 1000000; i++)
+                {
+                    new FullClass();
+                }
+                Thread.Sleep(1000);
+                return;
+            }
             {
                 //GCHandle gch = GCHandle.Alloc(new EmptyClass(), GCHandleType.Pinned); // 会出错
                 Object o = new object();
@@ -32,7 +50,7 @@ namespace GCTest
             }
             {
                 GCWatcherTest.Foo();
-                
+
             }
 
             //{

@@ -14,7 +14,10 @@ namespace SerializationTest
         static void Main(string[] args)
         {
             {
-                
+                ASerializationdvancedTest.Test();
+            }
+            {
+
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Context = new StreamingContext(StreamingContextStates.Other);
                 MemoryStream ms = new MemoryStream();
@@ -47,7 +50,7 @@ namespace SerializationTest
                 // 按顺序反序列化
                 Console.WriteLine("The value in that instance1: {0}, {1}", acwrf.AC.X, acwrf.X);
                 Console.WriteLine("The value in that instance2: {0}, {1}", acwrf2.AC.X, acwrf2.X);
-                return; 
+                return;
             }
             {
                 List<Int32> ls = new List<int> { 1, 23, 4, 51, 51 };

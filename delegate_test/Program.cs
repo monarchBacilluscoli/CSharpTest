@@ -7,6 +7,13 @@ namespace delegate_test
         internal delegate void SaySomthingDelegate(String s);
         static void Main(string[] args)
         {
+
+            {// Advanced invocation list test
+                AdvancedInvocationListTest.AdvancedInvocationTest();
+            }
+            {// basic delegate useage
+                BasicDelegateUse.BasicUse();
+            }
             SaySomthingDelegate ssd;
             ssd = SayOK;
             Program t = new Program();
@@ -20,14 +27,15 @@ namespace delegate_test
             LambdaWithLocals.TestLoacalsInLambda();
         }
 
-        static void SayOK(String somebody)
+        internal static void SayOK(String somebody)
         {
             Console.WriteLine("OK, {0}", somebody);
         }
 
-        public void SayYes(string somebody)
+        internal void SayYes(String somebody)
         {
             Console.WriteLine("Yes, {0}", somebody);
         }
+        delegate void test_delegate(String s); // This can not defined in a function, since it is a class defination.
     }
 }

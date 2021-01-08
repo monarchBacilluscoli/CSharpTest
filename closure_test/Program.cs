@@ -14,8 +14,8 @@ namespace closure_test
             int i = 2015;
             Action action1 = () =>
             {
-                i += 5;
-                System.Console.WriteLine("i1=" + i);
+                Int32 i2 = 5;
+                System.Console.WriteLine("i1=" + i2);
             };
             action1();
             i+=1;

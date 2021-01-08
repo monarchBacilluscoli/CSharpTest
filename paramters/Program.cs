@@ -72,7 +72,7 @@ namespace paramters
                 Console.WriteLine(t1.x);
             }
             TestClass tc = new TestClass();
-            tc.GetType().
+            tc.GetType();
             return;
         }
 

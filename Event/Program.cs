@@ -40,6 +40,10 @@ namespace EventTest
     {
         static void Main(string[] args)
         {
+            { // basic event test as the book
+                BasicEventTest.Test();
+                return;
+            }
             Console.WriteLine("Hello World!");
             LuckyMan lm = new LuckyMan();
             LuckyFriend[] lfs = new LuckyFriend[5];

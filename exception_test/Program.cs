@@ -3,6 +3,7 @@ using System.Reflection;
 using System.Text;
 using System.Runtime.Serialization;
 
+
 namespace exception_test
 {
     class Program
@@ -31,6 +32,7 @@ namespace exception_test
             {
                 Console.WriteLine("catch: {0}", MethodBase.GetCurrentMethod().Name);
                 Console.WriteLine(ex.Message);
+                System.Console.WriteLine(ex.StackTrace);
             }
             finally
             {
@@ -68,6 +70,9 @@ namespace exception_test
         }
         static void Main(string[] args)
         {
+            {// Diagnostics test
+                DiagnosticsTest.Test();
+            }
             long start_memory_use = GC.GetTotalMemory(false);
             ExceptionTest0();
             Console.WriteLine("Hello World!");

@@ -86,7 +86,7 @@ namespace interface_test
         static void Main(string[] args)
         {
             {
-                HandcraftWeapon c = new HandcraftWeapon();
+                HomemadeWeapon c = new HomemadeWeapon();
                 IMissileComponent imc = c;
                 c.Fire();
                 imc.Fire();
